@@ -25,6 +25,10 @@ app.get("/tone", (req, res) => {
   res.sendFile(__dirname + "/client/iphone_notification.mp3");
 });
 
+app.get("/favi", (req, res) => {
+  res.sendFile(__dirname + "/client/favicon.ico");
+});
+
 io.on("connect", (socket) => {
   socket.on("new-user", (user) => {
     users[socket.id] = user;

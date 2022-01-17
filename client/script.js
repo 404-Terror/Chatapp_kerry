@@ -29,7 +29,7 @@ document.getElementById("m").addEventListener("keypress", (e) => {
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
   let m = document.getElementById("m");
-  appendMsg(`<strong>You</strong>: ${m.value}`, "right msg");
+  if(m.value!="")appendMsg(`<strong>You</strong>: ${m.value}`, "right msg");
   socket.emit("chat-message", m.value);
   m.value = "";
   m.focus();
@@ -62,7 +62,12 @@ function appendMsg(data, className) {
   let li = document.createElement("li");
   li.className = className;
   li.innerHTML = data;
-  document.getElementById("messages").appendChild(li);
+  const msgs = document.getElementById("messages");
+  var shouldScroll = msgs.scrollTop + msgs.clientHeight === msgs.scrollHeight;
+  msgs.appendChild(li);
+  if(!shouldScroll){
+    msgs.scrollTop = msgs.scrollHeight; 
+  }
 }
 
 function typingTimeout() {
