@@ -1,0 +1,125 @@
+
+  body {
+     background-image: url("/background-image");
+     background-size: cover;
+     height: 100vh;
+     overflow: hidden;
+  }
+  form {
+    background: rgba(0,0,0,0.6);
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 929px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 0 8px;
+ }
+
+ ::placeholder {
+  color: black;
+  font-weight: 100;
+}
+  form input {
+    font-size: medium;
+    width: 85%;
+    background: rgba(168, 166, 166, 0.45);
+    padding: 18px;
+    border-radius: 10px 10px;
+    margin: 8px 9px 2px 0;
+    outline-style: none;
+    border: none;
+    height: 10px;
+  }
+
+  @media (max-width:868px){
+    form input {
+      font-size: medium;
+      width: 75%;
+      background: rgba(168, 166, 166, 0.45);
+      padding: 18px;
+      border-radius: 10px 10px;
+      margin: 7px 9px 0 0;
+      outline-style: none;
+      border: none;
+      height: 6px;
+    }
+  }
+  @media (max-width:487px) {
+    form input {
+      font-size: 0.75rem;
+      width: 65%;
+      background: rgba(168, 166, 166, 0.45);
+      padding: 14px;
+      border-radius: 10px 10px;
+      margin: 8px 5px 2px 0;
+      outline-style: none;
+      border: none;
+      height: 9px;
+  }
+ 
+}
+  form button {
+    background: rgba(168, 166, 166, 0.45);
+    padding: 6px 13px 12px;
+    border-radius: 11px;
+    outline-style: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 2%;
+  }
+  #messages {
+    position: relative;
+    margin: 5% auto 0;
+    max-width: 900px;
+    height: 70vh;
+    padding: 10px;
+    background: rgba(255, 252, 252, 0.1);
+    list-style-type: none;
+    box-shadow: 0 5px 15px rgb(0 0 0);
+    border-radius: 2%;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+.fas{
+  font-size: x-large;
+}
+ 
+  #messages li.left {
+    padding: 2%;
+    background: rgb(255 255 255 / 65%);
+    margin: 2%;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1px 9px 9px 9px;
+    float: left;
+    clear: both;
+    word-break: break-all;
+  }
+  #messages li.right {
+    padding: 2%;
+    background: rgb(151 255 132 / 60%);
+    margin: 2%;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 9px 1px 9px 9px;
+    float: right;
+    clear: both;
+    word-break: break-all;
+  }
+  
+  #status{
+    max-width: 920px;
+    margin: auto;
+    padding: 10px 0 3px;
+    font-weight: bolder;
+    color: #fff;
+    font-style: italic;
+    letter-spacing: 1px;
+  }
+  .fas{
+
+  }

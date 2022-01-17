@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>U-Chat | Chat with your group</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/style">
+  </head>
+  <body>
+    
+    <ul id="messages">
+    </ul>
+    <div id="status"></div>
+    <form>
+      <input id="m" type="text" placeholder="Enter your message here........" autocomplete="off" autofocus/>
+      <button><i class="fas fa-paper-plane fa-m"></i></button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script"></script>
+     
+  </body>
+</html>
