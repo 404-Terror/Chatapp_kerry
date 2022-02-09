@@ -4,6 +4,7 @@ let typing = false;
 let timeout;
 
 let statusElm = document.getElementById("status");
+let chatmsg = document.querySelector('#messages');
 
 while (!username) {
   username = prompt("What is your name?");
@@ -48,6 +49,7 @@ socket.on("chat-message", (data) => {
   appendMsg(`<strong>${data.username}</strong>: ${data.message}`, "left msg");
   var audio = new Audio("/tone");
   audio.play();
+  
 });
 
 socket.on("user-connected", (user) => {
@@ -62,12 +64,8 @@ function appendMsg(data, className) {
   let li = document.createElement("li");
   li.className = className;
   li.innerHTML = data;
-  const msgs = document.getElementById("messages");
-  var shouldScroll = msgs.scrollTop + msgs.clientHeight === msgs.scrollHeight;
-  msgs.appendChild(li);
-  if(!shouldScroll){
-    msgs.scrollTop = msgs.scrollHeight; 
-  }
+  document.getElementById("messages").appendChild(li);  
+  chatmsg.scrollTop = chatmsg.scrollHeight;
 }
 
 function typingTimeout() {

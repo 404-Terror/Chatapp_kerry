@@ -17,6 +17,7 @@ app.get("/script", (req, res) => {
   res.sendFile(__dirname + "/client/script.js");
 });
 
+
 app.get("/style", (req, res) => {
   res.sendFile(__dirname + "/client/style.css");
 });
