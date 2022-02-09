@@ -1,5 +1,5 @@
-# REALTIME CHAT APPLICATION USING SOCKET IO AND EXPRESS
+# REALTIME CHAT APPLICATION USING SOCKET.IO AND EXPRESS
 
-- Bidrectional Chat message
-- Nickname
+- To run in local computer use npm i command
 - User can see who is typing
+- Get notification sound on incoming message
